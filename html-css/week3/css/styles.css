@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+header{
+    display:flex;
+    justify-content: space-between;
+}
+nav ul{
+      display:flex;
+      flex-direction:row;
+      width:300px;
+      justify-content: space-around;
+      list-style:none;
+      
+}
+nav ul li a{
+        text-decoration:none;
+        color:#51050F;
+        font-weight:600;
+}
+h1{
+    font-family: 'Bodoni Moda', serif;
+    font-size:2rem;
+    font-weight: 700;
+    font-style:bold;
+    padding:5px;
+}
+
+
+
+
+.logo-img{
+    width:50%;
+    height:50%;
+}
+.nav-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+    text-align:center;
+    border:2px solid #D1E8E4;
+    background-color: #9D84B7;
+}
+.logo-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:25px;
+    text-align:center;
+    border:2px solid #D1E8E4;
+    background-color:#9D84B7;
+    width:200px;
+    height:200px;
+}
+.intro-section{
+    margin:25px;
+    width:70%;
+    background-color: antiquewhite;
+}
+p{
+    line-height: 1.5;
+    
+}
+.progress-section{
+    margin:25px;
+    
+}
+.progress-bar{
+    width:100%;
+    height:1rem;
+    background-color:#d5dae2;
+    position:relative;
+    border-radius:12px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.progress{
+    height:100%;
+    position:absolute;
+    left:0;
+    background-color:#2d9cdb;
+    border-radius:12px;
+    
+}
+.step1-progress{
+    width:20%;
+}
+.step2-progress{
+    width:55%;
+}
+.step3-progress{
+    width:90%;
+}
+.form-group{
+    display:flex;
+    flex-wrap: wrap;
+    margin:25px;
+
+    
+    
+}
+form {
+    background-color: #C7BEA2;
+    
+  }
+  form p{
+      margin:10px 25px;
+  }
+  .form-group textarea{
+      width:50%;
+  }
+  
+.input-group {
+    
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size:1.1rem;
+  }
+  .input-group:focus {
+    background-color: #a6adb1;
+  }
+  .label-head{
+    text-align: right;  
+    padding:5px;
+    flex: none;
+    display: block;
+    width: 160px;
+    font-weight: bold;
+    font-size: 1em;
+    
+   
+  }
+  span{
+      display:block;
+      font-size:.7rem;
+      width:150px;
+      color:#3D2C8D;
+  }
+  .next-button{
+    width:20%;
+    border-radius: 5px;
+    background-color: lightgreen;
+    padding: 10px 15px;
+    color:white;
+    position:relative;
+    margin:20px;
+    cursor:pointer;
+    font-size: 1.5rem;
+    
+  }
+.style-checkbox{
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width:90%;
+
+}
+.style-checkbox img{
+    width:250px;
+    height: 250px;
+
+}
+
+.interest-items{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:70%;
+}
+.radiobox{
+    display:flex;
+    justify-content: space-around;
+}
+.text-in-form{
+    margin:20px;
+}
+.checkbox-input{
+    height: 25px;
+    width: 25px;
+    background-color: #b6bac0;
+
+}
+.end-page img{
+    width:70%;
+    height:70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:0.5;
+}
+.end-page p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#14279B;
+    font-size:2rem;
+    font-weight: 700;
+    background-color: bisque;
+    padding:5px;
+}
+
+@media(min-width:600px) and (max-width:985px){
+    .form-group{
+        display:flex;
+        flex-direction: column;
+    }
+    .intro-section{
+        width:100%;
+    }
+    h1{
+        font-size:1.7rem;
+    }
+    header{
+        flex-direction: column;
+        
+    }
+    .logo-box{
+        width:100%;
+        margin:15px;
+        
+    }
+    .nav-box{
+        
+        width:100%;
+        padding:7px;
+    }
+    .label-head{
+        width:100%;
+        padding:5px;
+        margin:8px 0;
+        text-align:left;
+    }
+    .form-group textarea{
+        width:100%;
+    }
+    .interest-items{
+        flex-direction: column;
+        margin:25px;
+        
+    }
+    .radiobox{
+        flex-direction:column;
+    }
+    
+    
+}
