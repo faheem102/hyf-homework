@@ -10,6 +10,7 @@
 
     
   </head>
+  <body>
   <header>
       <div class="logo-box">
           <img src=".\images\logo.svg" alt="logo image" class="logo-img">
@@ -50,7 +51,7 @@
             
 
       </section>
-      <form action=".\index2.html" target="_blank" method="POST">
+      <form action=".\index2.html" target="_blank" method="GET">
         <div class="text-in-form">
           <p>Nice to Meet you. Let's spend a minute to get to know each other?
             Please enter the following
@@ -82,7 +83,7 @@
             <label class= "label-head" id = "address-label" for = "address">Street address*</label>
             <input class="input-group" id = "street-address" type= "text" required placeholder = "Enter your street address" name = "address">
             <label class= "label-head" id = "postcode-label" for = "postcode">Postcode*<span>(minimum 4 characters)</span></label>
-            <input class="input-group" id = "postcode" type= "text" required placeholder = "Enter your Postcode" minlength="4" maxlength="4" name = "postcode">
+            <input class="input-group" id = "postcode" type= "number" required placeholder = "Enter your Postcode" minlength="4" maxlength="4" name = "postcode">
           </div>
           
           <div class="form-group text-area-box">
@@ -106,10 +107,12 @@
             <input class="input-group checkbox-input" type="checkbox" id="input-group" name="saddress" checked>
             
         </div>
-        <input class="next-button" type="submit" value="Next Step">
+        <button class="next-button" type="submit" value="Next Step">Next</button>
         
         
         
 
       </form>
   </main>
+ </body>
+</html>
