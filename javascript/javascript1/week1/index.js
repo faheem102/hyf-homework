@@ -4,3 +4,8 @@ const yearFuture = 2045;
 const age = yearFuture - yearOfBirth;
 console.log(`You will be ${age} in ${yearFuture}.`);
 console.log("Goodboy-Oldboy" + " (A dog age Calculator)");
+const dogYearOfBirth = 2020;
+const dogYearFuture = 2045;
+const humanYear = dogYearFuture - dogYearOfBirth;
+const dogYear = (dogYearFuture - dogYearOfBirth) * 7;
+let shouldShowResultInDogYears = true;
