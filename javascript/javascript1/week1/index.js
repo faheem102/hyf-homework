@@ -42,6 +42,8 @@ else {
     console.log(`${friendsNames[0]} has paid exact right house price and julia has paid exact right house price.`);
 
 }
+console.log ("Ez Namey");
+
 
 
 
