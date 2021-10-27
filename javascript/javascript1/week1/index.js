@@ -18,21 +18,30 @@ else {
 }
 console.log("Housey Pricey" + " (A house price estimator)");
 let friendsNames = ["peter", "julia"];
-let houseHeight = 10;
-let houseWidth = 8;
-let houseDepth = 10;
-let volumeInMeters = houseHeight * houseWidth * houseDepth;
-let gardenSizeInM2 = 100;
-let houseCost = 2500000
-let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
-let priceDifference = houseCost - housePrice
-if (housePrice > houseCost) {
-    console.log(`${friendsNames[0]} have paid more than the house price`);
+let houseWidth = [8,5];
+let houseHeight = [10,8];
+let houseDepth = [10,11];
+const peterHouseVolume = houseWidth[0] * houseHeight[0] * houseDepth[0];
+const juliaHouseVolume = houseWidth[1] * houseHeight[1] * houseDepth[1];
+let volumeInMeters = [peterHouseVolume, juliaHouseVolume];
+let gardenSizeInM2 = [100,70];
+let houseCost = [2500000,1000000];
+let peterHousePrice = volumeInMeters[0] * 2.5 * 1000 + gardenSizeInM2[0] * 300;
+let juliaHousePrice = volumeInMeters[1] * 2.5 * 1000 + gardenSizeInM2[1] * 300; 
+let housePrice = [peterHousePrice, juliaHousePrice];
+let priceDifference = [houseCost[0]-housePrice[0], houseCost[1] - housePrice[1]];
+if (houseCost[0] > housePrice[0] & houseCost[1] < housePrice[1]) {
+    console.log(`${friendsNames[0]} has paid ${priceDifference[0]} less than the house price and julia has paid ${Math.abs(priceDifference[1])} more than the house price.`);
 
 }
-else if (housePrice <houseCost) {
-    console.log(`${friendsNames[0]} have paid ${priceDifference} less than the house price`);
+else if (houseCost[0] < housePrice[0] & houseCost[1] > housePrice[1]) {
+    console.log(`${friendsNames[0]} has paid ${priceDifference[0]} more than the house price and julia has paid ${Math.abs(priceDifference[1])} less than the house price.`);
+
 }
 else {
-    console.log(`${friendsNames[0]} have paid exact right house price`)
+    console.log(`${friendsNames[0]} has paid exact right house price and julia has paid exact right house price.`);
+
 }
+
+
+
