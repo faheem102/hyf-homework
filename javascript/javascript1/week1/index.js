@@ -17,3 +17,22 @@ else {
     console.log(`Your dog will be ${humanYear} human years old in ${dogYearFuture}`);
 }
 console.log("Housey Pricey" + " (A house price estimator)");
+let friendsNames = ["peter", "julia"];
+let houseHeight = 10;
+let houseWidth = 8;
+let houseDepth = 10;
+let volumeInMeters = houseHeight * houseWidth * houseDepth;
+let gardenSizeInM2 = 100;
+let houseCost = 2500000
+let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+let priceDifference = houseCost - housePrice
+if (housePrice > houseCost) {
+    console.log(`${friendsNames[0]} have paid more than the house price`);
+
+}
+else if (housePrice <houseCost) {
+    console.log(`${friendsNames[0]} have paid ${priceDifference} less than the house price`);
+}
+else {
+    console.log(`${friendsNames[0]} have paid exact right house price`)
+}
