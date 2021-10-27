@@ -43,7 +43,14 @@ else {
 
 }
 console.log ("Ez Namey");
+const firstWords = ["Amazing","Awesome", "excellent", "Fabulous", "Fantastic", "Incredible", "Outstanding", "Splendid", "Super", "Wonderful"];
+console.log(firstWords.length);
 
 
+const secondWords = ["business", "company", "concern", "firm", "enterprise", "establishment", "facility", "house", "outfit", "interest"];
+console.log(secondWords.length);
+const randomNumberFirst = Math.floor(Math.random() * 10);
+const randomNumberSecond = Math.floor(Math.random() * 10);
+let startupName = "";
 
 
