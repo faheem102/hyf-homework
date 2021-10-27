@@ -1,9 +1,9 @@
-console.log("Age-ify" + "A future age calculater.");
+console.log("Step-1- Age-ify" + "A future age calculater.");
 const yearOfBirth = 1985;
 const yearFuture = 2045;
 const age = yearFuture - yearOfBirth;
 console.log("You will be " + age  + " years in " + yearFuture + ".");
-console.log("Goodboy-Oldboy" + " (A dog age Calculator)");
+console.log("Step-2- Goodboy-Oldboy" + " (A dog age Calculator)");
 const dogYearOfBirth = 2020;
 const dogYearFuture = 2045;
 const humanYear = dogYearFuture - dogYearOfBirth;
@@ -16,7 +16,7 @@ if (shouldShowResultInDogYears === true) {
 else {
     console.log(`Your dog will be ${humanYear} human years old in ${dogYearFuture}`);
 }
-console.log("Housey Pricey" + " (A house price estimator)");
+console.log("Step-3- Housey Pricey" + " (A house price estimator)");
 let friendsNames = ["peter", "julia"];
 let houseWidth = [8,5];
 let houseHeight = [10,8];
@@ -42,15 +42,17 @@ else {
     console.log(`${friendsNames[0]} has paid exact right house price and julia has paid exact right house price.`);
 
 }
-console.log ("Ez Namey");
+console.log ("Step-4- Ez Namey");
 const firstWords = ["Amazing","Awesome", "excellent", "Fabulous", "Fantastic", "Incredible", "Outstanding", "Splendid", "Super", "Wonderful"];
-console.log(firstWords.length);
+//console.log(firstWords.length);
 
 
 const secondWords = ["business", "company", "concern", "firm", "enterprise", "establishment", "facility", "house", "outfit", "interest"];
-console.log(secondWords.length);
-const randomNumberFirst = Math.floor(Math.random() * 10);
-const randomNumberSecond = Math.floor(Math.random() * 10);
-let startupName = "";
+//console.log(secondWords.length);
+const randomNumberFirst = Math.floor(Math.random() * firstWords.length );
+const randomNumberSecond = Math.floor(Math.random() * secondWords.length);
+let startupName = firstWords[randomNumberFirst] + " " +secondWords[randomNumberSecond];
+//console.log(startupName);
+console.log(`"Our Startup name: "${startupName}" which contains ${startupName.length-1} characters"`);
 
 
