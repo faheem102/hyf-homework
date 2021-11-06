@@ -46,3 +46,59 @@ function clothesToWear (temperature) {
     }
 }
 console.log(clothesToWear(4));
+
+//Student Manager
+
+const class07Students = [];
+
+function addStudentToClass(studentName) {
+
+  // You write code here
+
+    if (class07Students.indexOf(studentName) != -1 &&
+
+          studentName !== "Queen")
+
+        console.log("Student " + studentName + " is already in the class");
+
+     else if(studentName !== "Queen" && class07Students.length > 5) 
+
+        console.log("Cannot add more students to class 07");
+
+  
+
+    else if (studentName !== "" || studentName !== undefined)  
+
+        class07Students.push(studentName);
+
+}
+
+function getNumberOfStudents() {
+
+  // You write code here
+
+  return class07Students.length;
+
+}
+
+//Add 6 students
+
+addStudentToClass("Moeed");
+
+addStudentToClass("Fatima");
+
+addStudentToClass("Dua");
+
+addStudentToClass("Ayaan");
+
+addStudentToClass("Ishah");
+
+addStudentToClass("Ishah2");
+
+//Add same student errors
+
+addStudentToClass("Dua");
+
+//Add another student error
+
+addStudentToClass("Samar");
