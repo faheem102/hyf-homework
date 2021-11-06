@@ -1,3 +1,4 @@
+console.log("hello world");
 function getFullname (firstname, surname, useFormalname, gender){
     if(firstname===""  || surname===""){
         return "firstname and surname needs to be filled."
