@@ -15,3 +15,15 @@ function getFullname (firstname, surname, useFormalname, gender){
    
 }
 console.log(getFullname("faheem", "hassan", true, "male"));
+
+//Second stage Event day application
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+function getEventDay (daysremaining){
+    const day = new Date();
+    day.setDate(day.getDate() + daysremaining);
+    console.log(day.getDay());
+    let eventDay = daysOfWeek[day.getDay()];
+    return eventDay;
+
+}
+console.log(getEventDay(5));
