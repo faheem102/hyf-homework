@@ -23,8 +23,8 @@ function getEventDay (daysremaining){
     const day = new Date();
     day.setDate(day.getDate() + daysremaining);
     console.log(day.getDay());
-    let eventDay = daysOfWeek[day.getDay()];
-    return eventDay;
+    return daysOfWeek[day.getDay()];
+    
 
 }
 console.log(getEventDay(5));
@@ -32,7 +32,7 @@ console.log(getEventDay(5));
 //Weather Wear
 
 function clothesToWear (temperature) {
-    let myClothes = "t-shirt and jeans";
+    const myClothes = "t-shirt and jeans";
     if (temperature <= 5) {
         console.log("Put jacket and warm cap on top of " + myClothes + " .drink tea or coffee");
     }
