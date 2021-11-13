@@ -76,3 +76,19 @@ function logOutSeriesText() {
 logOutSeriesText(); // logs out the text found above
 
 
+//Step- 4 Taking Notes
+const notes = [];
+
+function saveNote(content, id) {
+  // write some code here
+  
+  var noteTaking = {"id": id, "content": content};
+  notes.push(noteTaking);
+}
+
+saveNote("Pick up groceries", 1);
+saveNote("Do laundry", 2);
+saveNote("take children out", 3);
+
+console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
+
