@@ -121,5 +121,9 @@ console.log("You have added "+activities.length +" activities. They amount to "+
 }
 
 
-  showStatus(activities); // will log out this "You have added 3 activities. They amount to 78 min. of usage"
+  showStatus(activities); 
+
+
+  // Sorry ! Could not work on adding special features to this assignment questions. hopefully will work in the class.
+  //need some help and guidance to add special features to the activity and notes taking apps. 
 
