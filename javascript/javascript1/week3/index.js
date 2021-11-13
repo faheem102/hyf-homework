@@ -14,3 +14,7 @@ const names = [
   // Write some code here
   const nameToRemove = names.splice(1,1);
   // Code done
+  console.log(names);
+
+  //Step- 2 : When we will be there?
+
