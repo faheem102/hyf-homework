@@ -77,6 +77,8 @@ logOutSeriesText(); // logs out the text found above
 
 
 //Step- 4 Taking Notes
+
+
 const notes = [];
 
 function saveNote(content, id) {
@@ -91,4 +93,33 @@ saveNote("Do laundry", 2);
 saveNote("take children out", 3);
 
 console.log(notes); // [{content: 'Pick up groceries', id: 1}, {content: 'Do laundry', id: 2}]
+
+//Step- 5 CactusIO-interactive
+
+const activities = [];
+  function addActivity(date, activity, duration){
+      const activityVar = {"date": date, "activity":activity, "duration":duration };
+      activities.push(activityVar);
+
+      
+  }
+  addActivity("23/7-18", "Youtube", 30);
+  addActivity("23/7-18", "facebook", 40);
+  addActivity("23/7-18", "twitter", 50);
+  
+  console.log(activities);
+
+function showStatus(activities){
+    var duration = 0;
+    for (i = 0; i<activities.length; i++){
+        duration += activities[i].duration;
+
+
+    }
+console.log("You have added "+activities.length +" activities. They amount to "+duration +" min. of usage")
+
+}
+
+
+  showStatus(activities); // will log out this "You have added 3 activities. They amount to 78 min. of usage"
 
