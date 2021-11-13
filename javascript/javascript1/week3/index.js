@@ -27,4 +27,52 @@ function travelTime(speed, distance) {
 }
 console.log (travelTime(50, 432));
 
+//Step- 3 Series Duration 
+
+const seriesDurations = [
+    {
+        title: "Game of thrones",
+        days: 7,
+        hours: 18,
+        minutes: 6,
+    },
+    {
+        title: "Vikings",
+        days: 2,
+        hours: 17,
+        minutes: 16,
+    },
+    {
+        title: "Money Heist",
+        days: 4,
+        hours: 17,
+        minutes: 6,
+    },
+    {
+        title: "Squid Game",
+        days: 8,
+        hours:2,
+        minutes:12,
+    },
+  ];
+
+function logOutSeriesText() {
+    // write code here
+    //Game of thrones took 0.01% of my life
+  //Sopranos took 0.012% of my life
+  //The Wire took 0.007% of my life
+  
+  //In total that is 0.2% of my life
+    var totalYearsPerectage = 0;
+    for(i=0; i<seriesDurations.length; i++){
+    var durationInYears = ((seriesDurations[i].days * 24) + (seriesDurations[i].hours) + (seriesDurations[i].minutes/60))/8470;
+      var percentInLife = (durationInYears/80)*100;
+      console.log(seriesDurations[i].title + " took " + durationInYears.toFixed(3) + " of my life" )
+      totalYearsPerectage += percentInLife;
+    }
+  console.log("In total that is "+ totalYearsPerectage.toFixed(2) +"% of my life");
+  }
+  
+logOutSeriesText(); // logs out the text found above
+
 
