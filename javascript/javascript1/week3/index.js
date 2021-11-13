@@ -18,3 +18,13 @@ const names = [
 
   //Step- 2 : When we will be there?
 
+function travelTime(speed, distance) {
+    //const timeInnumbers = distance/speed;
+    const timeInnumbers = (distance/speed) * 60;
+    const hours = Math.floor(timeInnumbers/60); 
+    const minutes = Math.round(timeInnumbers % 60);
+    return `${hours} hours ${minutes} minutes`;
+}
+console.log (travelTime(50, 432));
+
+
