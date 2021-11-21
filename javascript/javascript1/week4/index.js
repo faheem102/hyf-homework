@@ -113,6 +113,7 @@ function getReply(command){
 getReply("what day is it today?");
 getReply("Hello my name is Faheem");
 getReply("What is my name?");
+getReply("Add watching in my todo list");
 getReply("Add music in my todo list");
 getReply("Add playing in my todo list");
 getReply("Add dancing in my todo list");
