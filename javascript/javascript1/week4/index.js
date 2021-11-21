@@ -123,4 +123,4 @@ getReply("what is 3 + 2");
 getReply("what is 4 - 2");
 getReply("what is 9 / 3");
 //uncomment below command to see the timer working
-//getReply("set a timer for 4 minutes");
+getReply("set a timer for 4 minutes");
