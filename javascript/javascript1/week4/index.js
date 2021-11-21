@@ -34,11 +34,11 @@ function getReply(command){
           (toDoList.push(commandArray[1]));
           console.log(toDoList);
         }
-        else if(commandArray[0]===("Remove")){
+        if(commandArray[0]===("Remove")){
           toDoList.splice(toDoList.indexOf(commandArray[1]),1);
           console.log(toDoList);
         }
-        else if(commandArray[4]===("todo?")){
+        if(commandArray[4]===("todo?")){
           console.log(toDoList);
         }
 
