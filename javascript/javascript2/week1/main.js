@@ -94,3 +94,40 @@ function shortestWord(a,b){
     
     }
 console.log (danishWords.reduce(shortestWord));
+
+//danish vowel counts
+
+let totalLetterCount = 0;
+let letterCount1 = 0;
+let letterCount2 = 0;
+let letterCount3 = 0;
+function vowelFinder(danishString){
+    for(i=0; i<danishString.length; i++){
+        const vowels = danishString.charAt(i);
+        if(vowels==="æ" || vowels==="ø" || vowels==="å"){
+            totalLetterCount += 1
+        }
+            if(vowels==="æ"){
+                letterCount1 += 1
+
+
+            }
+            if(vowels==="ø"){
+                letterCount2 += 1
+
+
+            }
+            if(vowels==="å"){
+                letterCount3 += 1
+
+
+            }
+
+    }
+    console.log(`total: ${totalLetterCount}, æ: ${letterCount1}, ø: ${letterCount2}, å: ${letterCount3}`);
+    
+
+
+
+}
+vowelFinder("Blå grød med røde bær Jeg har en blå bil");
