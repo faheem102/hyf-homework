@@ -37,6 +37,8 @@ nameInput.setAttribute("id", "personName")
 const myButton = document.createElement("button");
 myButton.innerHTML = "Click Me!"
 const resultText = document.createElement("p");
+resultText.style.color = "red";
+resultText.style.fontSize = "16px";
 
 bodyOfPage.appendChild(nameInput);
 bodyOfPage.appendChild(myButton);
