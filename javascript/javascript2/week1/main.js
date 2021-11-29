@@ -5,7 +5,7 @@ function renderProducts(product) {
     
     for(i=0; i<products.length; i++){
         const mainList = document.querySelector("ul");
-        const listHeading = document.createElement("h1");
+        const listHeading = document.createElement("h2");
         const listcomponent1 = document.createElement("li");
         const listcomponent2 = document.createElement("li");
         listcomponent1.innerHTML = `price: ${products[i].price}`
@@ -83,13 +83,13 @@ hoverEffect();
 //Shortest word finder
 
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
-function shortestWord(a,b){
-    if(a.length<= b.length){
-        return a;
+function shortestWord(wordbefore,wordafter){
+    if(wordbefore.length<= wordafter.length){
+        return wordbefore;
 
     }
     else{
-        return b;
+        return wordafter;
     }
 
     
@@ -100,9 +100,9 @@ console.log (danishWords.reduce(shortestWord));
 //danish vowel counts
 
 let totalLetterCount = 0;
-let letterCount1 = 0;
-let letterCount2 = 0;
-let letterCount3 = 0;
+let letterCountæ = 0;
+let letterCountø = 0;
+let letterCountå = 0;
 function vowelFinder(danishString){
     for(i=0; i<danishString.length; i++){
         const vowels = danishString.charAt(i);
