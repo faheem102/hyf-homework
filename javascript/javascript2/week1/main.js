@@ -62,23 +62,25 @@ function toggleAnimalName(){
     }
 
 }
+myButton.addEventListener("click", toggleAnimalName)
+nameInput.addEventListener("mouseover", toggleAnimalName)
 
-function buttonClick(){
-    myButton.addEventListener("click", function(){
-        if(document.querySelector("#choice-button").checked){
-            toggleAnimalName();
-        }
-    });
-}
-function hoverEffect(){
-    nameInput.addEventListener("mouseover", function(){
-        if(document.querySelector("#choice-hover").checked){
-            toggleAnimalName();
-        }
-    });
-}
-buttonClick();
-hoverEffect();
+// function buttonClick(){
+//     myButton.addEventListener("click", function(){
+//         if(document.querySelector("#choice-button").checked){
+//             toggleAnimalName();
+//         }
+//     });
+// }
+// function hoverEffect(){
+//     nameInput.addEventListener("mouseover", function(){
+//         if(document.querySelector("#choice-hover").checked){
+//             toggleAnimalName();
+//         }
+//     });
+// }
+// buttonClick();
+// hoverEffect();
 
 //Shortest word finder
 
@@ -110,17 +112,17 @@ function vowelFinder(danishString){
             totalLetterCount += 1
         }
             if(vowels==="æ"){
-                letterCount1 += 1
+                letterCountæ += 1
 
 
             }
             if(vowels==="ø"){
-                letterCount2 += 1
+                letterCountø += 1
 
 
             }
             if(vowels==="å"){
-                letterCount3 += 1
+                letterCountå += 1
 
 
             }
