@@ -62,9 +62,11 @@ function toggleAnimalName(){
     }
 
 }
-myButton.addEventListener("click", toggleAnimalName)
-nameInput.addEventListener("mouseover", toggleAnimalName)
-
+myButton.addEventListener("click", function () 
+{ if (document.querySelector("#choice-button").checked) 
+{ toggleAnimalName(); } }); nameInput.addEventListener("mouseover", function () 
+{ if (document.querySelector("#choice-hover").checked) 
+{ toggleAnimalName(); } });
 // function buttonClick(){
 //     myButton.addEventListener("click", function(){
 //         if(document.querySelector("#choice-button").checked){
