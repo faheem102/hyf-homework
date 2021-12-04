@@ -156,7 +156,11 @@ checkDuplicate();
 
 }
 
+let myNumbers = [1,2,3,4,5,6,7,8,9,10];
 
+ let newNumber = myNumbers.filter((number) => number % 2 !==0)
+ let numberDoubled = newNumber.map((n) => n*2)
+ console.log(numberDoubled);
 
 
 
