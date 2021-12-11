@@ -32,3 +32,11 @@
     z-index: 1000;
     cursor: pointer;
 }
+
+@media(max-width:875px){
+    .container {
+        width: 90%;
+
+    }
+    
+}
