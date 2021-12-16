@@ -1,0 +1,108 @@
+#container{
+    background-image: url("https://www.wallpaperuse.com/wallp/25-252084_m.jpg");
+    height:500px;
+    width:400px;
+    border-radius:10px;
+    font-family: 'Noto Sans Display', sans-serif;
+    margin:auto;
+    
+  }
+  .top-button{
+    text-align: center;
+    margin-top:10px;
+  }
+  #location{
+      background-color: #004d99;
+      color:azure;
+      font-size: 18px;
+      padding:5px;
+      text-align: center;
+      border-radius: 10px;;
+  }
+  .top-container{
+    text-align:center;
+    
+  }
+  #heading{
+    padding-top:15px;
+    font-style:bold;
+    font-weight:600;
+    
+  }
+  #temppara{
+    font-style:bold;
+    font-weight:400;
+  }
+  #feelslike{
+    font-style:bold;
+    font-weight:400;
+    font-size:16px;
+    color:#9900cc;
+  }
+  
+  .bottom-container{
+    background-color:white;
+    margin:7px;
+     display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+   
+  }
+  .sections{
+    flex:1;
+    text-align:center;
+    border: 1px solid blue;
+    border-radius: 3px;
+    margin:3px;
+  }
+  h4{
+    font-style:bold;
+    font-weight:600;
+    text-decoration:underline;
+    color:#cc0099;
+  }
+  #cl-1, #cl-2, #cl-3, #cl-4{
+    color:#004d99;
+  }
+  #giphy-searcher{
+    text-align: center;
+  }
+  #giphy-heading{
+    color: blueviolet;
+    font-style: italic;
+  }
+  #giphy-display{
+    display:grid;
+    grid-template-columns: auto auto;
+    
+
+  }
+  input{
+    display:inline-block;
+    margin:5px;
+    height:25px;
+    border-radius: 5px;
+  }
+  #giphy-button{
+    height: 2rem;
+    width:5rem;
+    border-radius: 3px;
+    background-color: #004d99;
+    color:beige;
+    font-size: 1rem;
+
+  }
+  #giphy-display img{
+    margin:10px auto 10px auto;
+    border:2px dotted blue;
+    padding:5px;
+    
+
+    
+
+
+  }
+  
+  
+  
+  
