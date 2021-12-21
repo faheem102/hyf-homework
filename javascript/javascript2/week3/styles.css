@@ -7,6 +7,14 @@
 
 .flex-container {
     display: flex;
+    height: 200px;
+}
+#error{
+    color: red; font-weight: bolder;
+
+}
+#startGame{
+    background-color:forestgreen; color:white;
 }
 
 .flex-child {

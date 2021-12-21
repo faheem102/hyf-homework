@@ -12,7 +12,7 @@ const delayString= (delay, stringToLog) =>{
     let delayTime = delay * 1000
 
     setTimeout(() => {
-        console.log (`${stringToLog}`)
+        console.log (stringToLog)
     }, delayTime)
 }
 delayString(4, "my name is Faheem?" );
@@ -101,7 +101,7 @@ const logBadJoke = () =>{
     console.log("'Bad Joke': You know what I saw today? Everything I looked at.")
 }
 function jokeCreator(shouldTellFunnyJoke, logFunnyJoke, logBadJoke){
-    if(shouldTellFunnyJoke ===true){
+    if(shouldTellFunnyJoke){
          return logFunnyJoke(jokeCreator)
     }
     else{
