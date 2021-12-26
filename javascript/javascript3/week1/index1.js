@@ -1,9 +1,9 @@
 //!--Giphy App--!
 
-const gifKeyword = document.getElementById("giphy-keyword")
-const gifNumber = document.getElementById("giphy-number")
-const gifButton = document.getElementById("giphy-button")
-const gifDisplay = document.getElementById("giphy-display")
+const gifKeyword = document.getElementById("giphy-keyword");
+const gifNumber = document.getElementById("giphy-number");
+const gifButton = document.querySelector(".giphy-button");
+const gifDisplay = document.querySelector(".giphy-display");
 
 
 
@@ -20,9 +20,9 @@ gifButton.addEventListener("click", () =>{
     console.log(obj);
     const result = obj.data
     result.forEach(element => {
-      let gifImages = document.createElement("img")
+      let gifImages = document.createElement("img");
       gifImages.src = element.images.fixed_height.webp
-      gifDisplay.appendChild(gifImages)
+      gifDisplay.appendChild(gifImages);
     });
   
 })

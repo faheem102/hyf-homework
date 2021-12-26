@@ -28,38 +28,38 @@
   
 // !--Weather app--!
 
-const cityName = document.getElementById("heading")
-      const temperature = document.getElementById("temppara")
-      const feeltemp = document.getElementById("feelslike")
-      const wind = document.getElementById("cl-1")
-      const description = document.getElementById("cl-2")
-      const riseTime = document.getElementById("cl-3")
-      const sunTime = document.getElementById("cl-4")
+      const cityName = document.querySelector(".heading");
+      const temperature = document.querySelector(".temp-para");
+      const feeltemp = document.querySelector(".feels-like");
+      const wind = document.querySelector(".wind-col");
+      const description = document.querySelector(".weather-col");
+      const riseTime = document.querySelector(".sunrise-col");
+      const sunTime = document.querySelector(".sunset-col");
       
-      const myButton = document.getElementById("location")
+      const myButton = document.querySelector(".location");
       function getWeather(myData){
         
         
-        const city =  myData.name
-        const mytemp = myData.main.temp
-        const feeling = myData.main.feels_like
-        const windSpeed = myData.wind.speed
-        const weatherDes = myData.weather[0].description
-        const sunRise = myData.sys.sunrise
-        const sunSet = myData.sys.sunset
-        const date1 = new Date(sunRise * 1000)
-        const hours1 = date1.getHours()
-        const minutes1 = date1.getMinutes()
-        const date2 = new Date(sunSet * 1000)
-        const hours2 = date2.getHours()
-        const minutes2 = date2.getMinutes()
+        const city =  myData.name;
+        const mytemp = myData.main.temp;
+        const feeling = myData.main.feels_like;
+        const windSpeed = myData.wind.speed;
+        const weatherDes = myData.weather[0].description;
+        const sunRise = myData.sys.sunrise;
+        const sunSet = myData.sys.sunset;
+        const date1 = new Date(sunRise * 1000);
+        const hours1 = date1.getHours();
+        const minutes1 = date1.getMinutes();
+        const date2 = new Date(sunSet * 1000);
+        const hours2 = date2.getHours();
+        const minutes2 = date2.getMinutes();
         
         cityName.innerHTML = city
         temperature.innerHTML = mytemp + " °C "
         feeltemp.innerHTML = `feels like ${feeling}°C`
-        const icon = myData.weather[0].icon
+        const icon = myData.weather[0].icon;
         const imageUrl = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
-        const myImage = document.getElementById("image")
+        const myImage = document.querySelector(".image")
         myImage.src=imageUrl
         wind.innerHTML = windSpeed
         description.innerHTML = weatherDes
@@ -70,7 +70,7 @@ const cityName = document.getElementById("heading")
         
         
       
-      fetch('https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=2e67673623b242fce63358a81c88036e')
+      fetch('https://api.openweathermap.org/data/2.5/weather?q=Copenhagen&units=metric&appid=2e67673623b242fce63358a81c88036e')
       .then(response => response.json())
       .then(myData =>getWeather(myData))
 

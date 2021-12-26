@@ -1,9 +1,9 @@
 #container{
     background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/f4/b4/b7/f4b4b705-ede1-d50b-7f5e-6590b563529b/source/512x512bb.jpg");
-    height:500px;
-    width:400px;
     border-radius:10px;
     font-family: 'Noto Sans Display', sans-serif;
+    width:35%;
+    height:65%;
     margin:auto;
     
   }
@@ -11,7 +11,7 @@
     text-align: center;
     margin-top:10px;
   }
-  #location{
+  .location{
       background-color: #004d99;
       color:azure;
       font-size: 18px;
@@ -23,17 +23,17 @@
     text-align:center;
     
   }
-  #heading{
+  .heading{
     padding-top:15px;
     font-style:bold;
     font-weight:600;
     
   }
-  #temppara{
+  .temp-para{
     font-style:bold;
     font-weight:400;
   }
-  #feelslike{
+  .feels-like{
     font-style:bold;
     font-weight:400;
     font-size:16px;
@@ -61,17 +61,17 @@
     text-decoration:underline;
     color:#cc0099;
   }
-  #cl-1, #cl-2, #cl-3, #cl-4{
+  .wind-col, .weather-col, .sunrise-col, .sunset-col{
     color:#004d99;
   }
-  #giphy-searcher{
+  .giphy-searcher{
     text-align: center;
   }
-  #giphy-heading{
+  .giphy-heading{
     color: blueviolet;
     font-style: italic;
   }
-  #giphy-display{
+  .giphy-display{
     display:grid;
     grid-template-columns: auto auto;
     
