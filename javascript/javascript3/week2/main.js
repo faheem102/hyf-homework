@@ -109,3 +109,6 @@ function delay(ms){
     const minutes2 = date2.getMinutes();
 console.log(`Sunrise in Copenhagen:- 0${hours1}:${minutes1}am and Sunset:-${hours2}:${minutes2}pm`)
   }).catch((error)=>{})
+
+
+  //Exercise--
