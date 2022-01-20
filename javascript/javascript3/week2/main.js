@@ -111,4 +111,43 @@ console.log(`Sunrise in Copenhagen:- 0${hours1}:${minutes1}am and Sunset:-${hour
   }).catch((error)=>{})
 
 
-  //Exercise--
+  //Exercise-- Visual Promise
+
+  // First get the Dom elements and of different Boxes
+
+const redBox = document.querySelector('ul.marks li:nth-child(1)');
+const blueBox = document.querySelector('ul.marks li:nth-child(2)');
+const greenBox = document.querySelector('ul.marks li:nth-child(3)');
+
+// Make a function to move them one by one to the target
+// Inside this function call moveElement function 
+// every time you call moveElement it should be inside previous moveElement function 
+
+function translateOneByOne(){
+  moveElement(redBox, { x: 20, y: 300 }).then(() => {
+    console.log("Element has been moved");
+    moveElement(blueBox, { x: 400, y: 300 }).then(() => {
+      console.log("Element has been moved");
+      moveElement(greenBox, { x: 400, y: 20 }).then(() => {
+        console.log("Element has been moved");
+      });
+
+    });
+
+  });
+
+}
+//translateOneByOne(); // comment out this function to see Boxes move one by one
+
+// make a function in which call moveElement three times and save them in a variable
+// when consume the promise call them together by using Promise.all
+
+function translateAllAtOne(){
+  const promise1 = moveElement(redBox, { x: 20, y: 300 });
+  const promise2 = moveElement(blueBox, { x: 400, y: 300 });
+  const promise3 = moveElement(greenBox, { x: 400, y: 20 })
+  Promise.all([promise1, promise2, promise3]).then(()=>{
+    console.log("All elements has been moved together")
+  })
+}
+translateAllAtOne();
