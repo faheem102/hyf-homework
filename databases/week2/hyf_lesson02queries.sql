@@ -26,8 +26,9 @@ SELECT *
 FROM user_task
 JOIN user ON user.id = user_task.user_id
 JOIN task ON task.id = user_task.task_id
+JOIN status on task.status_id = status.id
 WHERE user.name = 'Donald Duck'
-AND task.status_id = 1;
+AND status.name = 'Not Started';
 
 SELECT *
 FROM user_task
