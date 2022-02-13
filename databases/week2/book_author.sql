@@ -78,3 +78,8 @@ insert into book_author (book_id, author_id) values (5, 1);
 insert into book_author (book_id, author_id) values (2, 6);
 insert into book_author (book_id, author_id) values (3, 4);
 insert into book_author (book_id, author_id) values (8, 3);
+
+ALTER TABLE award
+MODIFY COLUMN award_date DATE;
+ALTER TABLE book
+MODIFY COLUMN published DATE;

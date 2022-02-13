@@ -3,7 +3,7 @@ USE hyf_lesson02;
 SELECT *
 FROM task;
 
-insert into task (id, title, description, created, updated, due_date, status_id) values (36, 'Complete the Assignment', 'work on your recent hyf assignment', '2022-02-06 06:54:16', '2022-02-07 13:05:09', '2022-02-11 13:05:09' , 2);
+insert into task (title, description, created, updated, due_date, status_id) values ('Complete the Assignment', 'work on your recent hyf assignment', '2022-02-06 06:54:16', '2022-02-07 13:05:09', '2022-02-11 13:05:09' , 2);
 
 UPDATE task
 SET title = 'Eat your Dinner'
@@ -15,7 +15,17 @@ WHERE id = 36;
 
 
 DELETE FROM task
-WHERE id =36;
+WHERE id =36
+SELECT title
+from task;
+SELECT title
+from task;
+DELETE FROM task
+WHERE id =37;
+DELETE FROM task
+WHERE id =38;
+DELETE FROM task
+WHERE id =39;
 
 SELECT *
 FROM user_task
