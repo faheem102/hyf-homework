@@ -13,7 +13,8 @@ app.get("/", async (request, response) => {
   response.send("Result of the Application");
 });
 const allMealswithReviews = meals.map((meal)=>{
-  meal.reviews = reviews.filter((review)=>meals.id===review.mealid);
+  meal.reviews = reviews.filter((review)=>meal.id===review.mealId);
+  // in the above line i made the change from meals.id meal.id === review.mealId as suggested
       return meal;
 
 });
@@ -32,18 +33,22 @@ app.get("/large-meals", async (request, response) => {
   response.json(largeMeals);
 });
 // random meal with review
+// make a helper function 
+const randomMealHelper = ()=> Math.floor(Math.random() * 5);
+
 app.get("/meal", async (request, response) => {
-  const randomMeal = allMealswithReviews[Math.floor(Math.random()* allMealswithReviews.length)];
+  const randomMeal = allMealswithReviews[randomMealHelper()];
   response.json(randomMeal);
 });
 // all reservations
 app.get("/reservations", async (request, response) => {
-  const allMeals = reservations.map((res)=>{return res});
-  response.json(allMeals);
+  // const allMeals = reservations.map((res)=>{return res});
+  response.json(reservations);
 });
 // random reservation
 app.get("/reservation", async (request, response) => {
-  const randomReservation = reservations[Math.floor(Math.random()*reservations.length)];
+  const randomReservation = reservations[randomMealHelper()];
+  console.log(randomReservation)
   response.json(randomReservation);
 });
 

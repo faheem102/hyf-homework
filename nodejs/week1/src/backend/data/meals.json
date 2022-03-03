@@ -22,5 +22,13 @@
         "description" : "Delicious rice dish with served with yoghurt",
         "createdAt" : "2020/04/7 14:34",
         "price" : 149
+    },
+    {
+        "id" : 4,
+        "title" : "Butter Chicken",
+        "maxNumberOfGuests" : 2,
+        "description" : "Nice dish made with herbs and piske fløde",
+        "createdAt" : "2021/01/7 14:34",
+        "price" : 129
     }
 ]
