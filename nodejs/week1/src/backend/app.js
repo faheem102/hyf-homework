@@ -1,3 +1,8 @@
+const app = require("./app");
+
+app.listen(3000, () => {
+    console.log("Example app listening on port 3000!");
+});
 // Import all the data
 const express = require("express");
 const meals = require("./data/meals");
