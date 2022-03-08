@@ -7,19 +7,20 @@ const meals = require("./../data/meals.json");
 
 router.get("/:id", async (request, response) => {
   const mealId = Number(request.params.id);
-  let mealWithid = meals;
+  let mealWithid;
   try {
   
     if(isNaN(mealId)){
       mealWithid = "You have entered a string. enter a number instead"
     }
-    if(mealId<=4){
-      mealWithid = meals.find((meal)=> meal.id === Number(request.params.id))}
-    if(mealId>4){
-    mealWithid = "Cannot find any meal for this id"
+    if(mealId <= meals.length){
+      mealWithid = meals.find((meal)=> meal.id === Number(request.params.id))  
     }
-  
-  response.json(mealWithid)
+    if(mealId > meals.length){
+      mealWithid = "Cannot find any meal with this id"
+    }
+  response.json(mealWithid);
+ 
 }   catch (error) {
     throw error;
   }
