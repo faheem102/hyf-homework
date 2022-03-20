@@ -1,11 +1,15 @@
 import React from "react";
-import {Listitems} from "./Listitems";
-export function TodoList(props){
-    return (
-        <ol>
-            {props.toDoListArray.map((task) => {
-          return <Listitems task= {task} />;
-        })}
-        </ol>
-    )
+import { Listitem } from "./Listitem";
+export function TodoList(props) {
+  const listOfTodos=
+    props.toDoListArray.map((task) => {
+      return <Listitem task={task} />;
+    });
+  
+    
+  return (
+    <ol>
+      {listOfTodos}
+    </ol>
+  );
 }
