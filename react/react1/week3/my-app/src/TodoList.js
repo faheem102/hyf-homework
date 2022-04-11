@@ -9,9 +9,7 @@ function FormBorder(props) {
 }
 export function TodoList({ fetchUrl }) {
   const [list, setList] = useState([]);
-  const [inputDescription, setInputDescription] = useState("");
   const [inputEditDescription, setInputEditDescription] = useState("");
-  const [inputDeadline, setInputDeadline] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
   // fetchUrl response as json and change the list state to newState called setList
@@ -22,23 +20,6 @@ export function TodoList({ fetchUrl }) {
       .then(setList);
   }, []);
 
-  // addTodo will give new todos an id. it will take value in description and deadline input and then add it into the list of todos
-
-  const addTodo = () => {
-    const lastItem = list[list.length - 1];
-    const newId = lastItem ? lastItem.id + 1 : 1;
-    const newTodo = {
-      description: inputDescription,
-      id: newId,
-      deadline: inputDeadline,
-      isChecked: false,
-      isEditing: false,
-    };
-
-    setList((prevTodos) => {
-      return [...prevTodos, newTodo];
-    });
-  };
   // toggleClass function will map all the list items to verify if the checkbox is checked or not
   const toggleClass = (id) => {
     const newList = list.map((item) => {
@@ -135,8 +116,27 @@ export function TodoList({ fetchUrl }) {
     </FancyBorder>
   ));
 
-  const FormPart = (
-    <FormBorder>
+  const FormPart = ({ list }, { setList }) => {
+    const [inputDescription, setInputDescription] = useState("");
+    const [inputDeadline, setInputDeadline] = useState("");
+    // addTodo will give new todos an id. it will take value in description and deadline input and then add it into the list of todos
+
+    const addTodo = () => {
+      const lastItem = list[list.length - 1];
+      const newId = lastItem ? lastItem.id + 1 : 1;
+      const newTodo = {
+        description: inputDescription,
+        id: newId,
+        deadline: inputDeadline,
+        isChecked: false,
+        isEditing: false,
+      };
+
+      setList((prevTodos) => {
+        return [...prevTodos, newTodo];
+      });
+    };
+    return (
       <div>
         <form>
           <label>Todo Description</label>
@@ -155,13 +155,16 @@ export function TodoList({ fetchUrl }) {
             onChange={(e) => setInputDeadline(e.target.value)}
           ></input>
         </form>
+        <button onClick={addTodo}>Add todo</button>
       </div>
-    </FormBorder>
-  );
+    );
+  };
+
   return (
     <>
-      <button onClick={addTodo}>Add todo</button>
-      {FormPart}
+      <FormBorder>
+        <FormPart list={list} setList={setList} />
+      </FormBorder>
       {todoItems.length === 0 ? "No items in the list" : todoItems}
     </>
   );
