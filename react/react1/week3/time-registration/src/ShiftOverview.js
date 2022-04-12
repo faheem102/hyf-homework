@@ -14,6 +14,7 @@ export const ShiftListItem = (props) => {
     <>
       <ul className="shift-info">
         <ShiftBorder>
+          
           <li>{name.toUpperCase()}</li>
           <li>{start}</li>
           <li>{end}</li>
