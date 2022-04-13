@@ -1,0 +1,26 @@
+ul {
+  display: flex;
+  max-width: 200px;
+  list-style: none;
+  flex-direction: column;
+}
+li {
+  width: 200px;
+}
+.fancy-border {
+  border: 3px solid rgb(60, 60, 66);
+  margin-top: 10px;
+}
+.form-border {
+  border: 3px solid blueviolet;
+  margin-bottom: 5px;
+}
+.checked-item {
+  text-decoration: line-through;
+}
+.editing {
+  display: inline-block;
+}
+.notEditing {
+  display: none;
+}
