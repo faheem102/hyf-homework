@@ -1,0 +1,17 @@
+.fancy-border {
+  border: 3px solid blueviolet;
+  margin-top: 15px;
+}
+.shift-info {
+  list-style: none;
+}
+.shift-border {
+  border: 3px solid palevioletred;
+  margin-top: 10px;
+}
+.button {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

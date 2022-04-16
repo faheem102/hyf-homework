@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Benjamin Hughes",
+      "email": "benjamin@hughes.dk",
+      "mealId": 1
+    },
+    {
+      "id": 2,
+      "name": "Peter Hughes",
+      "email": "Peter@hughes.dk",
+      "mealId": 2
+    },
+    {
+      "id": 3,
+      "name": "Joe Hughes",
+      "email": "Joe@hughes.dk",
+      "mealId": 1
+    },
+    {
+      "id": 4,
+      "name": "Samantha Hughes",
+      "email": "Samantha@hughes.dk",
+      "mealId": 3
+    },
+    {
+        "id": 5,
+        "name": "Sara Hughes",
+        "email": "sarah@hughes.dk",
+        "mealId": 4
+      },
+      {
+        "id": 6,
+        "name": "Brian Hughes",
+        "email": "brian@hughes.dk",
+        "mealId": 2
+      }
+  ]
