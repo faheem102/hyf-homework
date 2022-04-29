@@ -1,63 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import "./Githubsearch.css";
 import { SearchInput } from "./SearchInput";
+import { ListofUsers } from "./ListofUsers";
+export const QueryContext = createContext({
+  query: "",
+  setQuery: () => {},
+});
 
 export function GithubUsers() {
-  const [apiData, setApiData] = useState("");
+  const [usersList, setUsersList] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     setLoading(true);
+    setErrorMessage(null);
     fetch(`https://api.github.com/search/users?q=${searchValue}`)
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        if (data.message) {
-          setErrorMessage("Enter a valid username in the search");
-          setLoading(false);
-        } else {
-          setApiData(data.items);
-          setErrorMessage(null);
-          setLoading(false);
-        }
+      .then((payload) => {
+        setUsersList(payload.items);
+      })
+      .catch((error) => {
+        setErrorMessage(`error fetching ${error.message}`);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, [searchValue]);
-
-  const handleSearchChange = (event) => {
-    const value = event.target.value;
-    setSearchValue(value);
-  };
 
   return (
     <div className="App">
       <h1>Github User Search</h1>
-      <SearchInput
-        handleSearchChange={handleSearchChange}
-        searchValue={searchValue}
-      />
+      <QueryContext.Provider
+        value={{ query: searchValue, setQuery: setSearchValue }}
+      >
+        <SearchInput />
+      </QueryContext.Provider>
       {loading && <p>Loading Profiles....</p>}
       {errorMessage ? (
         <h2>{errorMessage}</h2>
       ) : (
-        <ListofUsers apiData={apiData} />
+        <ListofUsers usersList={usersList} />
       )}
     </div>
   );
 }
-
-const ListofUsers = ({ apiData }) => {
-  if (apiData) {
-    return apiData.map((user) => (
-      <>
-        <h3 key={user.id}>{user.login}</h3>
-        <img
-          className="user-image"
-          src={user.avatar_url}
-          alt="images of profile pics"
-        ></img>
-      </>
-    ));
-  }
-};

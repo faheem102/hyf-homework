@@ -5,7 +5,7 @@ import { GithubUsers } from "./GithubUsers";
 function App() {
   return (
     <div className="App">
-      <GithubUsers></GithubUsers>
+      <GithubUsers />
     </div>
   );
 }
